@@ -1,0 +1,11 @@
+tasks:
+  - name: install google-cloud-sdk & gcloud configs
+    init: |
+      wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+      sh Miniconda3-latest-Linux-x86_64.sh
+      source ~/.bashrc
+      # https://github.com/obspy/obspy/wiki/Installation-via-Anaconda
+      conda config --add channels conda-forge
+      conda create -n obspy python=3.10 obspy cartopy pytest pytest-json jupyter
+      conda activate obspy
+      # https://docs.obspy.org/tutorial/code_snippets/xcorr_pick_correction.html
