@@ -6,6 +6,7 @@ tasks:
       source ~/.bashrc
       # https://github.com/obspy/obspy/wiki/Installation-via-Anaconda
       conda config --add channels conda-forge
-      conda create -n obspy python=3.10 obspy cartopy pytest pytest-json jupyter
+      conda create -n obspy python=3.10 obspy cartopy pytest pytest-json jupyter statsmodels
       conda activate obspy
       # https://docs.obspy.org/tutorial/code_snippets/xcorr_pick_correction.html
+      jupyter notebook --ip=*
